@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, Parisienne;
+}
+
+/* --- HEADER --- */
+.main-header {
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    max-height: 100px;
+    display: block;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    color: #ffffff;
+    flex-grow: 1;
+    text-align: center;
+    font-family: Parisienne;
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #ffd000;
+}
+
+/* --- BANNER --- */
+.banner {
+    background-image: url(../assets/banner.png);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center; 
+    padding: 0 10%; 
+}
+
+.banner-content {
+    color: #ffffff;
+    max-width: 40vw; 
+    text-align: left;
+}
+
+.banner-content h2 {
+    font-family: Montserrat;
+    font-size: 5rem;
+    margin-bottom: 10px;
+}
+
+.banner-content h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+}
+
+.btn-banner {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-banner:hover {
+    background-color: #ffd500;
+    transform: scale(1.05);
+}
+
+/* --- TARJETAS --- */
+.cards-section {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: start;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    flex: 1;
+    min-width: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.card h4 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    padding: 20px 20px 10px 20px;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 0 20px 20px 20px;
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    margin-top: 40px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    color: #3498db;
+    transform: scale(1.2);
+}
+
+.footer-img{
+    height: 50px;
+    width: 50px;
+}
+
+/* --- DETALLE FRAGANCIA ZINEDINE ZIDANE --- */
+.fragrance-detail-section {
+    background-color: #181818;
+    padding: 80px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.fragrance-detail-container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.fragrance-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.brand-subtitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.fragrance-title {
+    font-family: montserrat;
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #ffffff;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.fragrance-title .thin-text {
+    font-weight: 300;
+    font-size: 2.2rem;
+}
+
+.fragrance-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 420px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.small-perfume-card {
+    position: relative;
+    width: 250px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.small-perfume-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.badge-new {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #b41515;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    letter-spacing: 1px;
+}
+
+.fragrance-image-block {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fragrance-image-block img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.fragrance-image-block img:hover{
+    transform: scale(0.8);
+}
+
+
+/* --- RESPONSIVE (Para pantallas chicas o celulares) --- */
+@media (max-width: 768px) {
+    .fragrance-detail-container {
+    grid-template-columns: 1fr; /* Pasa a una sola columna */
+    gap: 40px;
+    }
+    
+    .fragrance-image-block {
+    justify-content: center;
+    order: -1; /* Mueve la imagen principal arriba en celulares */
+    }
+    
+    .fragrance-text-block {
+    align-items: center;
+    text-align: center;
+    }
+    
+    .fragrance-description {
+    text-align: center;
+    }
+}
+
+/*Mosaico*/
+/* Estilo personalizado opcional para el efecto de mosaico */
+        .mosaic-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px; /* Bordes redondeados */
+            margin-bottom: 24px; /* Espaciado inferior */
+        }
+        
+        .mosaic-item img {
+            transition: transform 0.3s ease;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Efecto Zoom al pasar el cursor */
+        .mosaic-item:hover img {
+            transform: scale(1.05);
+        }
+        /* Alturas fijas para simular asimetría en pantallas grandes */
+        @media (min-width: 768px) {
+            .h-md-250 { height: 250px; }
+            .h-md-400 { height: 400px; }
+            .h-md-500 { height: 500px; }
+        }
+
+        /*CONTACTO*/
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        .bg-image-side {
+            background-image: url('/assets/c1.webp');
+            background-size: cover;
+            background-position: center;
+            min-height: 100%;
+        }
+        @media (max-width: 767.98px) {
+            .bg-image-side {
+                min-height: 200px; /* Altura más baja para móviles */
+            }
+        }
+
+    .about-main {
+    background-color: #fcfcfc; /* Un fondo casi blanco, muy limpio */
+    min-height: 80vh;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    padding: 80px 40px;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: left;
+    justify-content: center;
+}
+
+.about-title {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 800;
+    position: relative;
+}
+
+.about-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ffd000;
+    margin-top: 10px;
+}
+
+.about-description {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de la imagen en formato circular */
+.about-image-wrapper {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%; 
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 8px solid #ffffff;
+    margin: 0 auto;
+}
+
+.about-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- ANIMACIÓN SUTIL DE ENTRADA --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-fade-in {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* --- RESPONSIVE NOSOTROS --- */
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr; /* En tablets y celulares pasa a una sola columna */
+        gap: 40px;
+        text-align: center;
+    }
+
+    .about-title::after {
+        margin: 10px auto 0 auto; /* Centra la línea dorada en móviles */
+    }
+
+    .about-image-wrapper {
+        width: 300px;
+        height: 300px;
+        order: -1; /* Muestra la imagen arriba del texto en pantallas chicas */
+    }
+}
+
+/* --- SECCIÓN FRAGANCIAS DE LOS CRACKS (FLIP CARDS) --- */
+.cracks-main {
+    background-color: #f8fafc; /* Color claro para contrastar con las tarjetas */
+    min-height: 85vh;
+    padding: 60px 40px;
+}
+
+.cracks-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cracks-main-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.cracks-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* Contenedor de las tarjetas */
+.flip-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Configuración del contenedor 3D */
+.flip-card {
+    background-color: transparent;
+    width: 320px;
+    height: 450px;
+    perspective: 1000px; /* Determina el efecto de profundidad 3D al girar */
+}
+
+/* El elemento interno que realmente va a rotar */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d; /* Clave para que los hijos mantengan su posición 3D */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+
+/* Al pasar el mouse, gira 180 grados en el eje Y */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Propiedades comunes para el frente y el dorso */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Oculta la parte de atrás cuando se da vuelta */
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* --- ESTILO FRENTE --- */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Degradado oscuro sobre la foto para que se lea el nombre del jugador */
+.player-name-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px;
+    background: linear-gradient(transparent, rgba(44, 62, 80, 0.95));
+    text-align: left;
+}
+
+.player-name-overlay h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* --- ESTILO DORSO (Cuando se da vuelta) --- */
+.flip-card-back {
+    background-color: #2c3e50; /* Tu azul característico */
+    color: #ffffff;
+    transform: rotateY(180deg); /* El dorso arranca ya invertido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.flip-card-back h4 {
+    font-size: 1.4rem;
+    color: #ffd000;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.perfume-type {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #bdc3c7;
+    margin-bottom: 25px;
+}
+
+.perfume-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .flip-cards-container {
+        gap: 30px;
+    }
+    .flip-card {
+        width: 100%;
+        max-width: 340px;
+    }
+}
