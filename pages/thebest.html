@@ -10,20 +10,28 @@
 <body>
 
     <header class="main-header">
-        <a href="/index.html" class="logo">
-            <img src="../assets/logofoa.png" alt="Logotipo">
-        </a>
-        <h1 class="header-title">The Beautifull Parfume</h1>
-        <nav class="header-nav">
-            <ul class="nav-list">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./galery.html">Galery</a></li>
-                <li><a href="./thebest.html">The Best</a></li>
-                <li><a href="./aboutus.html">About Us</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+            <a href="/index.html" class="logo">
+                <img src="../assets/logofoa.png" alt="Logotipo">
+            </a>
+            <h1 class="header-title">The Beautifull Parfume</h1>
+            
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/galery.html">Galery</a></li>
+                    <li><a href="../pages/thebest.html">The Best</a></li>
+                    <li><a href="../pages/aboutus.html">About Us</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
     <main class="cracks-main">
         <section class="cracks-section">
             <h2 class="cracks-main-title">THE BEST's fragances</h2>
@@ -66,7 +74,7 @@
                 <article class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="../assets/kiki.jpeg" alt="David Beckham">
+                            <img src="../assets/kiki.jpeg" alt="Kylian Mbappe">
                             <div class="player-name-overlay">
                                 <h3>Kylian Mbappe</h3>
                             </div>
@@ -82,7 +90,7 @@
                 <article class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="../assets/griez.jpeg" alt="Lionel Messi">
+                            <img src="../assets/griez.jpeg" alt="Antoinne Griezmann">
                             <div class="player-name-overlay">
                                 <h3>Antoine Griezmann</h3>
                             </div>
@@ -98,7 +106,7 @@
                 <article class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="../assets/ney.jpeg" alt="Lionel Messi">
+                            <img src="../assets/ney.jpeg" alt="Neymar JR">
                             <div class="player-name-overlay">
                                 <h3>Neymar JR</h3>
                             </div>
@@ -114,7 +122,7 @@
                 <article class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="../assets/gb.jpeg" alt="Lionel Messi">
+                            <img src="../assets/gb.jpeg" alt="Gareth Bale">
                             <div class="player-name-overlay">
                                 <h3>Gareth Bale</h3>
                             </div>
@@ -144,4 +152,14 @@
             <a href="https://www.instagram.com/" class="social-icon" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"><img src="../logos/instagram.png" alt="logo de instagram" class="footer-img"></i></a>
         </div>
     </footer>
+        <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const headerNav = document.querySelector('.header-nav');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        headerNav.classList.toggle('active');
+    });
+    </script>
     </body>
+    </html>

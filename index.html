@@ -14,6 +14,13 @@
             <img src="./assets/logofoa.png" alt="Logotipo">
         </a>
         <h1 class="header-title">The Beautifull Parfume</h1>
+        
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <nav class="header-nav">
             <ul class="nav-list">
                 <li><a href="./index.html">Home</a></li>
@@ -94,5 +101,14 @@
         </div>
     </footer>
 
+    <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const headerNav = document.querySelector('.header-nav');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        headerNav.classList.toggle('active');
+    });
+</script>
 </body>
 </html>

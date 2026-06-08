@@ -15,13 +15,20 @@
             <img src="../assets/logofoa.png" alt="Logotipo">
         </a>
         <h1 class="header-title">The Beautifull Parfume</h1>
+        
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <nav class="header-nav">
             <ul class="nav-list">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="./galery.html">Galery</a></li>
-                <li><a href="./thebest.html">The Best</a></li>
-                <li><a href="./aboutus.html">About Us</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="../pages/galery.html">Galery</a></li>
+                <li><a href="../pages/thebest.html">The Best</a></li>
+                <li><a href="../pages/aboutus.html">About Us</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -34,48 +41,48 @@
 
         <div class="row g-3"> <div class="col-12 col-md-4">
                 <div class="mosaic-item h-md-400">
-                    <img src="../assets/m1.webp" class="img-fluid" alt="Imagen 1">
+                    <img src="../assets/m1.webp" class="img-fluid" alt="Arabian perfum">
                 </div>
                 
                 <div class="mosaic-item h-md-400">
-                    <img src="../assets/m2.jpeg" class="img-fluid" alt="Imagen 1">
+                    <img src="../assets/m2.jpeg" class="img-fluid" alt="snake perfum">
                 </div>
 
                 <div class="mosaic-item h-md-250">
-                    <img src="../assets/m3.webp" class="img-fluid" alt="Imagen 2">
+                    <img src="../assets/m3.webp" class="img-fluid" alt="Wood perfum">
                 </div>
                 <div class="mosaic-item h-md-250">
-                    <img src="../assets/m4.jpeg" class="img-fluid" alt="Imagen 2">
+                    <img src="../assets/m4.jpeg" class="img-fluid" alt="Tom ford perfum">
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
                 <div class="mosaic-item h-md-250">
-                    <img src="../assets/m5.jpeg" class="img-fluid" alt="Imagen 3">
+                    <img src="../assets/m5.jpeg" class="img-fluid" alt="Coconut perfume">
                 </div>
                 <div class="mosaic-item h-md-250">
-                    <img src="../assets/m6_.webp" class="img-fluid" alt="Imagen 3">
+                    <img src="../assets/m6_.webp" class="img-fluid" alt="Invictus perfume">
                 </div>
                 <div class="mosaic-item h-md-400">
-                    <img src="../assets/m7.webp" class="img-fluid" alt="Imagen 4">
+                    <img src="../assets/m7.webp" class="img-fluid" alt="Aqua di gio perfume">
                 </div>
                 <div class="mosaic-item h-md-400">
-                    <img src="../assets/m8.webp" class="img-fluid" alt="Imagen 4">
+                    <img src="../assets/m8.webp" class="img-fluid" alt="Arabian tonka perfume">
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
                 <div class="mosaic-item h-md-500">
-                    <img src="../assets/m9.webp" class="img-fluid" alt="Imagen 5">
+                    <img src="../assets/m9.webp" class="img-fluid" alt="Bond perfume">
                 </div>
                 <div class="mosaic-item h-md-500">
-                    <img src="../assets/m10.jpeg" class="img-fluid" alt="Imagen 5">
+                    <img src="../assets/m10.jpeg" class="img-fluid" alt="Eros flame perfume">
                 </div>
                 <div class="mosaic-item h-md-150" style="height: 150px;">
-                    <img src="../assets/m11.webp" class="img-fluid" alt="Imagen 6">
+                    <img src="../assets/m11.webp" class="img-fluid" alt="JPG perfume">
                 </div>
                 <div class="mosaic-item h-md-150" style="height: 150px;">
-                    <img src="../assets/m12.jpeg" class="img-fluid" alt="Imagen 6">
+                    <img src="../assets/m12.jpeg" class="img-fluid" alt="Leighton perfume">
                 </div>
             </div>
 
@@ -99,5 +106,14 @@
         </div>
     </footer>
     
+        <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const headerNav = document.querySelector('.header-nav');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        headerNav.classList.toggle('active');
+    });
+    </script>
 </body>
 </html>

@@ -10,20 +10,28 @@
 <body>
 
     <header class="main-header">
-        <a href="/index.html" class="logo">
-            <img src="../assets/logofoa.png" alt="Logotipo">
-        </a>
-        <h1 class="header-title">The Beautifull Parfume</h1>
-        <nav class="header-nav">
-            <ul class="nav-list">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./galery.html">Galery</a></li>
-                <li><a href="./thebest.html">The Best</a></li>
-                <li><a href="./aboutus.html">About Us</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+            <a href="/index.html" class="logo">
+                <img src="../assets/logofoa.png" alt="Logotipo">
+            </a>
+            <h1 class="header-title">The Beautifull Parfume</h1>
+            
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/galery.html">Galery</a></li>
+                    <li><a href="../pages/thebest.html">The Best</a></li>
+                    <li><a href="../pages/aboutus.html">About Us</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
     <main class="about-main">
         <section class="about-section animated-fade-in">
             <div class="about-container">
@@ -63,4 +71,15 @@
         </div>
     </footer>
 
+        <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const headerNav = document.querySelector('.header-nav');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        headerNav.classList.toggle('active');
+    });
+    </script>
+
 </body>
+</html>

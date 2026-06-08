@@ -15,13 +15,20 @@
             <img src="../assets/logofoa.png" alt="Logotipo">
         </a>
         <h1 class="header-title">The Beautifull Parfume</h1>
+        
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <nav class="header-nav">
             <ul class="nav-list">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="./galery.html">Galery</a></li>
-                <li><a href="./thebest.html">The Best</a></li>
-                <li><a href="./aboutus.html">About Us</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="../pages/galery.html">Galery</a></li>
+                <li><a href="../pages/thebest.html">The Best</a></li>
+                <li><a href="../pages/aboutus.html">About Us</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -93,6 +100,15 @@
             <a href="https://www.instagram.com/" class="social-icon" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"><img src="../logos/instagram.png" alt="logo de instagram" class="footer-img"></i></a>
         </div>
     </footer>
+    
+    <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const headerNav = document.querySelector('.header-nav');
 
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        headerNav.classList.toggle('active');
+    });
+    </script>
 </body>
 </html>
