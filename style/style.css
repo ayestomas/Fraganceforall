@@ -219,6 +219,7 @@
   background-size: cover;
   background-position: center;
   height: 70vh;
+  min-height: 400px;
   display: flex;
   align-items: center;
   padding: 0 10%;
@@ -232,12 +233,41 @@
   font-family: "Montserrat", sans-serif;
   font-size: 5rem;
   margin-bottom: 10px;
+  line-height: 1.1;
 }
 .banner-content h3 {
   font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 25px;
   color: #e0e0e0;
+}
+@media (max-width: 992px) {
+  .banner {
+    padding: 0 5%;
+  }
+  .banner-content {
+    max-width: 70vw;
+  }
+  .banner-content h2 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .banner {
+    height: 60vh;
+    justify-content: center;
+  }
+  .banner-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .banner-content h2 {
+    font-size: 2.2rem;
+  }
+  .banner-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
 }
 
 .btn-banner {
@@ -250,6 +280,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
 }
 .btn-banner:hover {
   background-color: #ffd500;
@@ -272,6 +303,62 @@
   justify-content: space-between;
   gap: 30px;
   flex-wrap: wrap;
+}
+.cards-section .card {
+  background-color: transparent;
+  border: none;
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.cards-section .card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.cards-section .card img:hover {
+  transform: translateY(-5px);
+}
+.cards-section .card h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-top: 5px;
+}
+.cards-section .card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgb(71.1451612903, 100.25, 129.3548387097);
+}
+@media (max-width: 992px) {
+  .cards-section {
+    padding: 40px 20px;
+  }
+  .cards-section .card {
+    flex: 1 1 calc(50% - 15px);
+  }
+}
+@media (max-width: 768px) {
+  .cards-section .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .cards-section .cards-container {
+    gap: 40px;
+  }
+  .cards-section .card {
+    flex: 1 1 100%;
+  }
+  .cards-section .card img {
+    height: 280px;
+  }
 }
 
 .fragrance-detail-section {
