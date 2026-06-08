@@ -1,1 +1,50 @@
-@use "../utilities/variables" as v;
+@import '../utilities/variables';
+
+.main-footer {
+    background-color: $color-primary;
+    color: $color-secondary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    margin-top: 40px;
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+
+        a {
+            color: $color-footer-links;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $color-secondary;
+            }
+        }
+    }
+
+    .footer-right {
+        display: flex;
+        gap: 20px;
+    }
+
+    .social-icon {
+        color: $color-secondary;
+        font-size: 1.5rem;
+        transition: color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+            color: #3498db; // Mantengo el celeste original de redes sociales
+            transform: scale(1.2);
+        }
+    }
+
+    .footer-img {
+        height: 50px;
+        width: 50px;
+    }
+}

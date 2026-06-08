@@ -1,113 +1,123 @@
-@use "../utilities/variables" as v;
+@import '../utilities/variables';
 
-.header{
-    background-color: v.$colorPrincipal;
+.header {
+    background-color: $color-primary;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: relative; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
     z-index: 1000;
-    .logo img {
-    max-height: 100px;
-    display: block;
-    }
-    .header-title {
-    font-size: 1.5rem;
-    color: #ffffff;
-    flex-grow: 1;
-    text-align: center;
-    font-family: Parisienne;
-    }
-    .nav-list {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    }     
 
-    .nav-list a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    .logo {
+        img {
+            max-height: 100px;
+            display: block;
+        }
     }
-    .nav-list a:hover {
-    color: #ffd000;
+
+    &-title {
+        font-size: 1.5rem;
+        color: $color-secondary;
+        flex-grow: 1;
+        text-align: center;
+        font-family: $font-elegant;
     }
+
+    &-nav {
+        .nav-list {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            a {
+                text-decoration: none;
+                color: $color-secondary;
+                font-weight: 600;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $color-accent;
+                }
+            }
+        }
+    }
+
+    // Botón Hamburguesa Móvil
     .menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 28px;
-    height: 20px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 1100;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1100;
+
+        span {
+            width: 100%;
+            height: 3px;
+            background-color: $color-secondary;
+            transition: all 0.3s ease;
+        }
+
+        &.active {
+            span:nth-child(1) {
+                transform: translateY(8.5px) rotate(45deg);
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                transform: translateY(-8.5px) rotate(-45deg);
+            }
+        }
     }
 
-    /* Las 3 rayitas del botón */
-    .menu-toggle span {
-    width: 100%;
-    height: 3px;
-    background-color: #ffffff; /* Combinando con tus textos blancos */
-    transition: all 0.3s ease;
-    }
-    /* --- RESPONSIVE (Celulares y Tablets) --- */
+    // Responsive Header
     @media (max-width: 768px) {
-        .main-header {
-        padding: 15px 20px; /* Reducimos padding en los costados */
-    }
+        padding: 15px 20px;
 
         .logo img {
-        max-height: 60px; /* Achicamos un poco el logo en celular */
-    }
+            max-height: 60px;
+        }
 
         .header-title {
-        font-size: 1.2rem; /* El título se adapta al espacio */
-        text-align: left;  /* Lo alineamos a la izquierda junto al logo */
-        margin-left: 15px;
-    }
+            font-size: 1.2rem;
+            text-align: left;
+            margin-left: 15px;
+        }
+
         .menu-toggle {
             display: flex;
-    }
+        }
 
-    .header-nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #2c3e50; /* Mismo color de fondo que elegiste */
-        box-shadow: 0 4px 5px rgba(0,0,0,0.2);
-        max-height: 0; /* Oculto inicialmente */
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
+        &-nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: $color-primary;
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
 
-    /* Clase activa para desplegar el menú con JS */
-        .header-nav.active {
-            max-height: 300px; /* Altura suficiente para los enlaces */
-    }
+            &.active {
+                max-height: 300px;
+            }
 
-    .nav-list {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        gap: 20px;
-    }
-
-    /* Animación: El botón de 3 líneas pasa a ser una "X" al abrirse */
-    .menu-toggle.active span:nth-child(1) {
-        transform: translateY(8.5px) rotate(45deg);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;}
-    .menu-toggle.active span:nth-child(3) {
-        transform: translateY(-8.5px) rotate(-45deg);
-    }
+            .nav-list {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                gap: 20px;
+            }
+        }
     }
 }

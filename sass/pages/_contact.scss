@@ -1,0 +1,19 @@
+@import '../utilities/variables';
+
+.form-container {
+    background-color: $color-secondary;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.bg-image-side {
+    background-image: url('/assets/c1.webp');
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+
+    @media (max-width: 767.98px) {
+        min-height: 200px;
+    }
+}

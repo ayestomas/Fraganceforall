@@ -1,0 +1,136 @@
+@import '../utilities/variables';
+
+.cracks-main {
+    background-color: #f8fafc;
+    min-height: 85vh;
+    padding: 60px 40px;
+
+    .cracks-section {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .cracks-main-title {
+        font-size: 2.5rem;
+        color: $color-text-dark;
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+
+    .cracks-subtitle {
+        text-align: center;
+        color: $color-text-muted;
+        font-size: 1.1rem;
+        margin-bottom: 50px;
+    }
+}
+
+.flip-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        gap: 30px;
+    }
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 320px;
+    height: 450px;
+    perspective: 1000px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    &-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border-radius: 20px;
+    }
+
+    &:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    &-front, &-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    &-front {
+        background-color: #bbb;
+        color: black;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .player-name-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 20px;
+            background: linear-gradient(transparent, rgba(44, 62, 80, 0.95));
+            text-align: left;
+
+            h3 {
+                color: $color-secondary;
+                font-size: 1.5rem;
+                margin: 0;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &-back {
+        background-color: $color-primary;
+        color: $color-secondary;
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+
+        h4 {
+            font-size: 1.4rem;
+            color: $color-accent;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .perfume-type {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: $color-footer-links;
+            margin-bottom: 25px;
+        }
+
+        .perfume-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: $color-text-light;
+        }
+    }
+}

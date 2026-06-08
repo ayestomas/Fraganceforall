@@ -1,19 +1,16 @@
 // sass --watch sass/main.scss style/style.css
 
-// utilidades
-@use "utilities/variables";
-@use "utilities/mixins";
-@use "utilities/animations";
+// 1. Utilidades globales
+@import './utilities/variables';
 
-// componentes
+// 2. Componentes globales reutilizables
+@import './components/header';
+@import './components/footer';
+@import './components/cards';
 
-@use "components/header";
-@use "components/footer";
-
-//pages
-
-@use "pages/index";
-@use "pages/aboutus";
-@use "pages/contact";
-@use "pages/galery";
-@use "pages/thebest";
+// 3. Páginas específicas
+@import './pages/index';
+@import './pages/thebest';
+@import './pages/aboutus';
+@import './pages/galery';
+@import './pages/contact';

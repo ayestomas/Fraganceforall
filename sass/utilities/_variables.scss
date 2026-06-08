@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&display=swap');
+// --- COLORES ---
+$color-primary: #2c3e50;    // Tu azul característico
+$color-secondary: #ffffff;  // Blanco
+$color-accent: #ffd000;     // Dorado / Amarillo hover
+$color-accent-hover: #ffd500;
+$color-dark: #181818;       // Fondo sección Musc Terrible
+$color-text-dark: #2c3e50;
+$color-text-muted: #666666;
+$color-text-light: #e0e0e0;
+$color-footer-links: #bdc3c7;
+$color-badge: #b41515;
 
-$fuentePrincipal: Montserrat;
-$fuenteSecundaria: Parisienne;
-$colorPrincipal: #2c3e50;
-$colorSecundario: #ffd000;
-$colorFuente: black, white;
+// --- FUENTES ---
+$font-main: 'Montserrat', sans-serif;
+$font-elegant: 'Parisienne', cursive;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: $fuentePrincipal;
-}
-
-body{
-    background-color: white;
-    padding: 0 25px;
-}
-
-h1, h2, h3{
-    font-family: $fuenteSecundaria;
+    font-family: $font-main, $font-elegant;
 }
