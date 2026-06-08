@@ -1,2 +1,6 @@
 .vscode/
 node_modules/
+style/style.css.map
+style-backup.css
+package-lock.json
+package.json

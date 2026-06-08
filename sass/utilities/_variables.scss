@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&display=swap');
+
+$fuentePrincipal: Montserrat;
+$fuenteSecundaria: Parisienne;
+$colorPrincipal: #2c3e50;
+$colorSecundario: #ffd000;
+$colorFuente: black, white;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fuentePrincipal;
+}
+
+body{
+    background-color: white;
+    padding: 0 25px;
+}
+
+h1, h2, h3{
+    font-family: $fuenteSecundaria;
+}
