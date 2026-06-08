@@ -9,20 +9,29 @@
     padding: 30px 40px;
     margin-top: 40px;
 
+    // --- Cambios para diseño Responsive ---
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 30px;          // Espacio entre la lista de links y las redes sociales
+        text-align: center;
+        padding: 30px 20px; // Un poco menos de padding lateral en móviles
+    }
+
     .footer-links {
         display: flex;
         flex-direction: column;
         gap: 10px;
         list-style: none;
-
+        padding: 0;         // Asegura que no haya padding heredado que descentre la lista
+        color: white;
         a {
-            color: $color-footer-links;
+            color: #fff; // 👈 Cambia esto a blanco (o usa tu variable, ej: $color-secondary)
             text-decoration: none;
             font-size: 0.9rem;
             transition: color 0.3s ease;
 
             &:hover {
-                color: $color-secondary;
+                color: $color-secondary; // Color al pasar el mouse
             }
         }
     }
@@ -38,7 +47,7 @@
         transition: color 0.3s ease, transform 0.2s ease;
 
         &:hover {
-            color: #3498db; // Mantengo el celeste original de redes sociales
+            color: #ffffff; 
             transform: scale(1.2);
         }
     }
